@@ -1,9 +1,29 @@
 Python 速查表中文版
 ===
 
-[TOC]
-
 本手册是 [Python cheat sheet](http://datasciencefree.com/python.pdf) 的中文翻译版。原作者：Arianne Colton and Sean Chen(data.scientist.info@gmail.com)
+
+[惯例](#惯例)
+
+[获取帮助](#获取帮助)
+
+[模块](模块)
+
+[数值类类型](#数值类类型)
+
+[数据结构](#数据结构)
+
+[函数](#函数)
+
+[控制流](#控制流)
+
+[面向对象编程](#面向对象编程)
+
+[常见字符串操作](#常见字符串操作)
+
+[异常处理](#异常处理)
+
+[对列表、字典和元组的深入理解](#对列表、字典和元组的深入理解)
 
 ## 惯例
 
