@@ -1,9 +1,9 @@
-\documentclass[]{ctexart}
+\documentclass[utf-8]{ctexart}
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
-\usepackage{fixltx2e} % provides \textsubscript
 \usepackage{xeCJK}
+\usepackage{fixltx2e} % provides \textsubscript
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
@@ -19,11 +19,12 @@
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 % use microtype if available
 \IfFileExists{microtype.sty}{%
-\usepackage{microtype}
+\usepackage[]{microtype}
 \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 }{}
-\usepackage{hyperref}
-\hypersetup{unicode=true,
+\PassOptionsToPackage{hyphens}{url} % url is loaded by hyperref
+\usepackage[unicode=true]{hyperref}
+\hypersetup{
             pdfborder={0 0 0},
             breaklinks=true}
 \urlstyle{same}  % don't use monospace font for urls
@@ -34,37 +35,37 @@
 \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
 % Add ',fontsize=\small' for more characters per line
 \newenvironment{Shaded}{}{}
-\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
-\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
-\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
-\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
-\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{{#1}}}
-\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
-\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
-\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
-\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{{#1}}}
-\newcommand{\ImportTok}[1]{{#1}}
-\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
-\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{{#1}}}}
-\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
-\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
-\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
-\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{{#1}}}
-\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
-\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{{#1}}}
-\newcommand{\BuiltInTok}[1]{{#1}}
-\newcommand{\ExtensionTok}[1]{{#1}}
-\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{{#1}}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{{#1}}}
-\newcommand{\RegionMarkerTok}[1]{{#1}}
-\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
-\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
-\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
-\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
-\newcommand{\NormalTok}[1]{{#1}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{#1}}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{#1}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{#1}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{#1}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
 \IfFileExists{parskip.sty}{%
 \usepackage{parskip}
 }{% else
@@ -85,39 +86,50 @@
 \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
 
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+
 \date{}
 
 \begin{document}
 
 \section{Python 速查表中文版}\label{header-n0}
 
-本手册是 \href{http://datasciencefree.com/python.pdf}{Python cheat
-sheet} 的中文翻译版。原作者：Arianne Colton and Sean
-Chen(\href{mailto:data.scientist.info@gmail.com}{\nolinkurl{data.scientist.info@gmail.com}})
+\begin{itemize}
+\item
+  本手册是 \href{http://datasciencefree.com/python.pdf}{Python cheat
+  sheet} 的中文翻译版。原作者：Arianne Colton and Sean
+  Chen(\href{mailto:data.scientist.info@gmail.com}{\nolinkurl{data.scientist.info@gmail.com}})
+\item
+  编译：\href{https://github.com/ucasFL}{ucasFL}
+\end{itemize}
 
-\protect\hyperlink{header-n27}{惯例}
+\protect\hyperlink{header-n32}{惯例}
 
-\protect\hyperlink{header-n38}{获取帮助}
+\protect\hyperlink{header-n43}{获取帮助}
 
-\protect\hyperlink{ux6a21ux5757}{模块}
+\protect\hyperlink{header-n54}{模块}
 
-\protect\hyperlink{header-n64}{数值类类型}
+\protect\hyperlink{header-n69}{数值类类型}
 
-\protect\hyperlink{header-n123}{数据结构}
+\protect\hyperlink{header-n128}{数据结构}
 
-\protect\hyperlink{header-n212}{函数}
+\protect\hyperlink{header-n217}{函数}
 
-\protect\hyperlink{header-n302}{控制流}
+\protect\hyperlink{header-n307}{控制流}
 
-\protect\hyperlink{header-n327}{面向对象编程}
+\protect\hyperlink{header-n332}{面向对象编程}
 
-\protect\hyperlink{header-n349}{常见字符串操作}
+\protect\hyperlink{header-n354}{常见字符串操作}
 
-\protect\hyperlink{header-n351}{异常处理}
+\protect\hyperlink{header-n357}{异常处理}
 
-\protect\hyperlink{header-n362}{对列表、字典和元组的深入理解}
+\protect\hyperlink{header-n369}{对列表、字典和元组的深入理解}
 
-\hypertarget{header-n27}{\subsection{惯例}\label{header-n27}}
+\hypertarget{header-n32}{\subsection{惯例}\label{header-n32}}
 
 \begin{itemize}
 \item
@@ -128,7 +140,7 @@ Chen(\href{mailto:data.scientist.info@gmail.com}{\nolinkurl{data.scientist.info@
   Python 使用空白符（制表符或空格）来缩进代码，而不是使用花括号。
 \end{itemize}
 
-\hypertarget{header-n38}{\subsection{获取帮助}\label{header-n38}}
+\hypertarget{header-n43}{\subsection{获取帮助}\label{header-n43}}
 
 \begin{itemize}
 \item
@@ -139,9 +151,9 @@ Chen(\href{mailto:data.scientist.info@gmail.com}{\nolinkurl{data.scientist.info@
   获取模块帮助： \texttt{help(re)}
 \end{itemize}
 
-\subsection{模块（亦称库）}\label{header-n49}
+\hypertarget{header-n54}{\subsection{模块}\label{header-n54}}
 
-模块只是一个简单地以 \texttt{.py} 为后缀的文件。
+模块亦称库，它只是一个简单地以 \texttt{.py} 为后缀的文件。
 
 \begin{itemize}
 \item
@@ -157,11 +169,11 @@ Chen(\href{mailto:data.scientist.info@gmail.com}{\nolinkurl{data.scientist.info@
 文件中的所有语句。如果你想把模块内容导入到当前名字空间，请使用
 \texttt{from\ module1\ import\ *} 语句。}
 
-\hypertarget{header-n64}{\subsection{数值类类型}\label{header-n64}}
+\hypertarget{header-n69}{\subsection{数值类类型}\label{header-n69}}
 
 查看变量的数据类型：\texttt{type(variable)}
 
-\subsubsection{六种经常使用的数据类型}\label{header-n67}
+\subsubsection{六种经常使用的数据类型}\label{header-n72}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -199,7 +211,7 @@ Chen(\href{mailto:data.scientist.info@gmail.com}{\nolinkurl{data.scientist.info@
 \begin{Shaded}
 \begin{Highlighting}[]
 \NormalTok{template }\OperatorTok{=} \StringTok{'}\SpecialCharTok{%.2f}\StringTok{ }\SpecialCharTok{%s}\StringTok{ haha $}\SpecialCharTok{%d}\StringTok{'}\OperatorTok{;}
-\NormalTok{str1 }\OperatorTok{=} \NormalTok{template }\OperatorTok{%} \NormalTok{(}\FloatTok{4.88}\NormalTok{, }\StringTok{'hola'}\NormalTok{, }\DecValTok{2}\NormalTok{)}
+\NormalTok{str1 }\OperatorTok{=}\NormalTok{ template }\OperatorTok{%}\NormalTok{ (}\FloatTok{4.88}\NormalTok{, }\StringTok{'hola'}\NormalTok{, }\DecValTok{2}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 \item
@@ -216,7 +228,7 @@ Chen(\href{mailto:data.scientist.info@gmail.com}{\nolinkurl{data.scientist.info@
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{def} \NormalTok{func1(a, b, c }\OperatorTok{=} \VariableTok{None}\NormalTok{)}
+\KeywordTok{def}\NormalTok{ func1(a, b, c }\OperatorTok{=} \VariableTok{None}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -227,7 +239,7 @@ Chen(\href{mailto:data.scientist.info@gmail.com}{\nolinkurl{data.scientist.info@
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\ControlFlowTok{if} \NormalTok{variable }\OperatorTok{is} \VariableTok{None} \NormalTok{:}
+\ControlFlowTok{if}\NormalTok{ variable }\KeywordTok{is} \VariableTok{None}\NormalTok{ :}
 \end{Highlighting}
 \end{Shaded}
 \item
@@ -244,7 +256,7 @@ Chen(\href{mailto:data.scientist.info@gmail.com}{\nolinkurl{data.scientist.info@
 \begin{Shaded}
 \begin{Highlighting}[]
 \CommentTok{#从字符串中创建 datetime}
-\NormalTok{dt1 }\OperatorTok{=} \NormalTok{datetime.strptime(}\StringTok{'20091031'}\NormalTok{, }\StringTok{'%Y%m}\SpecialCharTok{%d}\StringTok{'}\NormalTok{)}
+\NormalTok{dt1 }\OperatorTok{=}\NormalTok{ datetime.strptime(}\StringTok{'20091031'}\NormalTok{, }\StringTok{'%Y%m}\SpecialCharTok{%d}\StringTok{'}\NormalTok{)}
 \CommentTok{#获取 date 对象}
 \NormalTok{dt1.date()}
 \CommentTok{#获取 time 对象}
@@ -252,20 +264,20 @@ Chen(\href{mailto:data.scientist.info@gmail.com}{\nolinkurl{data.scientist.info@
 \CommentTok{#将 datetime 格式化为字符串}
 \NormalTok{dt1.strftime(}\StringTok{'%m/}\SpecialCharTok{%d}\StringTok{/%Y%H:%M'}\NormalTok{)}
 \CommentTok{#更改字段值}
-\NormalTok{dt2 }\OperatorTok{=} \NormalTok{dt1.replace(minute }\OperatorTok{=} \DecValTok{0}\NormalTok{, second }\OperatorTok{=} \DecValTok{30}\NormalTok{)}
+\NormalTok{dt2 }\OperatorTok{=}\NormalTok{ dt1.replace(minute }\OperatorTok{=} \DecValTok{0}\NormalTok{, second }\OperatorTok{=} \DecValTok{30}\NormalTok{)}
 \CommentTok{#做差, diff 是一个 datetime.timedelta 对象}
-\NormalTok{diff }\OperatorTok{=} \NormalTok{dt1 }\OperatorTok{-} \NormalTok{dt2}
+\NormalTok{diff }\OperatorTok{=}\NormalTok{ dt1 }\OperatorTok{-}\NormalTok{ dt2}
 \end{Highlighting}
 \end{Shaded}
 
 \textbf{注：Python 中的绝大多数对象都是可变的，只有字符串和元组例外。}
 
-\hypertarget{header-n123}{\subsection{数据结构}\label{header-n123}}
+\hypertarget{header-n128}{\subsection{数据结构}\label{header-n128}}
 
 \textbf{注：所有的 non-Get 函数调用，比如下面例子中的
 \texttt{list1.sort()} 都是原地操作，即不会创建新的对象，除非特别声明。}
 
-\subsubsection{元组}\label{header-n126}
+\subsubsection{元组}\label{header-n131}
 
 元组是 Python 中任何类型的对象的一个一维、固定长度、不可变的序列。
 
@@ -274,15 +286,15 @@ Chen(\href{mailto:data.scientist.info@gmail.com}{\nolinkurl{data.scientist.info@
 \CommentTok{#创建元组}
 \NormalTok{tup1 }\OperatorTok{=} \DecValTok{4}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{6} 
 \CommentTok{# or}
-\NormalTok{tup1 }\OperatorTok{=} \NormalTok{(}\DecValTok{6}\NormalTok{, }\DecValTok{7}\NormalTok{, }\DecValTok{8}\NormalTok{)}
+\NormalTok{tup1 }\OperatorTok{=}\NormalTok{ (}\DecValTok{6}\NormalTok{, }\DecValTok{7}\NormalTok{, }\DecValTok{8}\NormalTok{)}
 \CommentTok{#创建嵌套元组}
-\NormalTok{tup1 }\OperatorTok{=} \NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{6}\NormalTok{), (}\DecValTok{7}\NormalTok{, }\DecValTok{8}\NormalTok{)}
+\NormalTok{tup1 }\OperatorTok{=}\NormalTok{ (}\DecValTok{4}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{6}\NormalTok{), (}\DecValTok{7}\NormalTok{, }\DecValTok{8}\NormalTok{)}
 \CommentTok{#将序列或迭代器转化为元组}
 \BuiltInTok{tuple}\NormalTok{([}\DecValTok{1}\NormalTok{, }\DecValTok{0}\NormalTok{, }\DecValTok{2}\NormalTok{])}
 \CommentTok{#连接元组}
-\NormalTok{tup1 }\OperatorTok{+} \NormalTok{tup2}
+\NormalTok{tup1 }\OperatorTok{+}\NormalTok{ tup2}
 \CommentTok{#解包元组}
-\NormalTok{a, b, c }\OperatorTok{=} \NormalTok{tup1}
+\NormalTok{a, b, c }\OperatorTok{=}\NormalTok{ tup1}
 \end{Highlighting}
 \end{Shaded}
 
@@ -291,11 +303,11 @@ Chen(\href{mailto:data.scientist.info@gmail.com}{\nolinkurl{data.scientist.info@
 \begin{Shaded}
 \begin{Highlighting}[]
 \CommentTok{#交换两个变量的值}
-\NormalTok{a, b }\OperatorTok{=} \NormalTok{b, a}
+\NormalTok{a, b }\OperatorTok{=}\NormalTok{ b, a}
 \end{Highlighting}
 \end{Shaded}
 
-\subsubsection{列表}\label{header-n133}
+\subsubsection{列表}\label{header-n138}
 
 列表是 Python
 中任何类型的对象的一个一维、非固定长度、可变（比如内容可以被修改）的序列。
@@ -303,11 +315,11 @@ Chen(\href{mailto:data.scientist.info@gmail.com}{\nolinkurl{data.scientist.info@
 \begin{Shaded}
 \begin{Highlighting}[]
 \CommentTok{#创建列表}
-\NormalTok{list1 }\OperatorTok{=} \NormalTok{[}\DecValTok{1}\NormalTok{, }\StringTok{'a'}\NormalTok{, }\DecValTok{3}\NormalTok{]}
+\NormalTok{list1 }\OperatorTok{=}\NormalTok{ [}\DecValTok{1}\NormalTok{, }\StringTok{'a'}\NormalTok{, }\DecValTok{3}\NormalTok{]}
 \CommentTok{#or}
 \NormalTok{list1 }\OperatorTok{=} \BuiltInTok{list}\NormalTok{(tup1)}
 \CommentTok{#连接列表}
-\NormalTok{list1 }\OperatorTok{+} \NormalTok{list2 }
+\NormalTok{list1 }\OperatorTok{+}\NormalTok{ list2 }
 \CommentTok{#or}
 \NormalTok{list1.extend(list2)}
 \CommentTok{#追加到列表的末尾}
@@ -315,11 +327,11 @@ Chen(\href{mailto:data.scientist.info@gmail.com}{\nolinkurl{data.scientist.info@
 \CommentTok{#插入指定位置}
 \NormalTok{list1.insert(PosIndex, }\StringTok{'a'}\NormalTok{)}
 \CommentTok{#反向插入，即弹出给定位置的值/删除}
-\NormalTok{ValueAtIdx }\OperatorTok{=} \NormalTok{list1.pop(PosIndex)}
+\NormalTok{ValueAtIdx }\OperatorTok{=}\NormalTok{ list1.pop(PosIndex)}
 \CommentTok{#移除列表中的第一个值, a 必须是列表中第一个值}
 \NormalTok{list1.remove(}\StringTok{'a'}\NormalTok{)}
 \CommentTok{#检查成员资格}
-\DecValTok{3} \OperatorTok{in} \NormalTok{list1 }\OperatorTok{=>} \VariableTok{True} \OperatorTok{or} \VariableTok{False}
+\DecValTok{3} \KeywordTok{in}\NormalTok{ list1 }\OperatorTok{=>} \VariableTok{True} \KeywordTok{or} \VariableTok{False}
 \CommentTok{#对列表进行排序}
 \NormalTok{list1.sort()}
 \CommentTok{#按特定方式排序}
@@ -339,7 +351,7 @@ Chen(\href{mailto:data.scientist.info@gmail.com}{\nolinkurl{data.scientist.info@
 \end{itemize}
 
 \paragraph{\texorpdfstring{内建的 \texttt{bisect}
-模块}{内建的 bisect 模块}}\label{header-n147}
+模块}{内建的 bisect 模块}}\label{header-n152}
 
 \begin{itemize}
 \item
@@ -350,7 +362,7 @@ Chen(\href{mailto:data.scientist.info@gmail.com}{\nolinkurl{data.scientist.info@
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\ImportTok{import} \NormalTok{bisect}
+\ImportTok{import}\NormalTok{ bisect}
 \NormalTok{list1 }\OperatorTok{=} \BuiltInTok{list}\NormalTok{(}\BuiltInTok{range}\NormalTok{(}\DecValTok{10}\NormalTok{))}
 \CommentTok{#找到 5 在 list1 中的位置，从 1 开始，因此 position = index + 1}
 \NormalTok{bisect.bisect(list1, }\DecValTok{5}\NormalTok{)}
@@ -362,7 +374,7 @@ Chen(\href{mailto:data.scientist.info@gmail.com}{\nolinkurl{data.scientist.info@
 \textbf{注：\texttt{bisect}
 模块中的函数并不会去检查列表是否排序好，因为这会花费很多时间。所以，对未排序好的列表使用这些函数也不会报错，但可能会返回不正确的结果。}
 
-\subsubsection{针对序列类型的切片}\label{header-n158}
+\subsubsection{针对序列类型的切片}\label{header-n163}
 
 序列类型包括 \texttt{str}、\texttt{array}、\texttt{tuple}、\texttt{list}
 等。
@@ -393,12 +405,12 @@ Chen(\href{mailto:data.scientist.info@gmail.com}{\nolinkurl{data.scientist.info@
 \end{Highlighting}
 \end{Shaded}
 
-\subsubsection{字典（哈希映射）}\label{header-n169}
+\subsubsection{字典（哈希映射）}\label{header-n174}
 
 \begin{Shaded}
 \begin{Highlighting}[]
 \CommentTok{#创建字典}
-\NormalTok{dict1 }\OperatorTok{=} \NormalTok{\{}\StringTok{'key1'}\NormalTok{: }\StringTok{'value1'}\NormalTok{, }\DecValTok{2}\NormalTok{: [}\DecValTok{3}\NormalTok{,}\DecValTok{2}\NormalTok{]\}}
+\NormalTok{dict1 }\OperatorTok{=}\NormalTok{ \{}\StringTok{'key1'}\NormalTok{: }\StringTok{'value1'}\NormalTok{, }\DecValTok{2}\NormalTok{: [}\DecValTok{3}\NormalTok{,}\DecValTok{2}\NormalTok{]\}}
 \CommentTok{#从序列创建字典}
 \BuiltInTok{dict}\NormalTok{(}\BuiltInTok{zip}\NormalTok{(KeyList, ValueList))}
 \CommentTok{#获取/设置/插入元素}
@@ -407,7 +419,7 @@ Chen(\href{mailto:data.scientist.info@gmail.com}{\nolinkurl{data.scientist.info@
 \CommentTok{#get 提供默认值}
 \NormalTok{dict1.get(}\StringTok{'key1'}\NormalTok{, DefaultValue)}
 \CommentTok{#检查键是否存在}
-\CommentTok{'key1'} \OperatorTok{in} \NormalTok{dict1}
+\CommentTok{'key1'} \KeywordTok{in}\NormalTok{ dict1}
 \CommentTok{#获取键列表}
 \NormalTok{dict1.keys()}
 \CommentTok{#获取值列表}
@@ -426,7 +438,7 @@ Chen(\href{mailto:data.scientist.info@gmail.com}{\nolinkurl{data.scientist.info@
   以相同的顺序返回键列表和值列表，但顺序不是特定的，又称极大可能非排序。
 \end{itemize}
 
-\paragraph{有效字典键类型}\label{header-n181}
+\paragraph{有效字典键类型}\label{header-n186}
 
 \begin{itemize}
 \item
@@ -438,7 +450,7 @@ Chen(\href{mailto:data.scientist.info@gmail.com}{\nolinkurl{data.scientist.info@
   会返回一个哈希值，而 \texttt{hash({[}1,2{]})} 则会报错（不可哈希）。
 \end{itemize}
 
-\subsubsection{集合}\label{header-n189}
+\subsubsection{集合}\label{header-n194}
 
 \begin{itemize}
 \item
@@ -458,11 +470,11 @@ Chen(\href{mailto:data.scientist.info@gmail.com}{\nolinkurl{data.scientist.info@
 \CommentTok{#超集测试}
 \NormalTok{set1.issuperset(set2)}
 \CommentTok{#测试两个集合中的元素是否完全相同}
-\NormalTok{set1 }\OperatorTok{==} \NormalTok{set2}
+\NormalTok{set1 }\OperatorTok{==}\NormalTok{ set2}
 \end{Highlighting}
 \end{Shaded}
 
-\paragraph{集合操作}\label{header-n198}
+\paragraph{集合操作}\label{header-n203}
 
 \begin{itemize}
 \item
@@ -475,7 +487,7 @@ Chen(\href{mailto:data.scientist.info@gmail.com}{\nolinkurl{data.scientist.info@
   对称差（又称异或）：\texttt{set1\ \^{}\ set2}
 \end{itemize}
 
-\hypertarget{header-n212}{\subsection{函数}\label{header-n212}}
+\hypertarget{header-n217}{\subsection{函数}\label{header-n217}}
 
 Python 的函数参数传递是通过\textbf{引用传递}。
 
@@ -486,7 +498,7 @@ Python 的函数参数传递是通过\textbf{引用传递}。
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{def} \NormalTok{func1(posArg1, keywordArg1 }\OperatorTok{=} \DecValTok{1}\NormalTok{, ..)}
+\KeywordTok{def}\NormalTok{ func1(posArg1, keywordArg1 }\OperatorTok{=} \DecValTok{1}\NormalTok{, ..)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -499,7 +511,7 @@ Python 的函数参数传递是通过\textbf{引用传递}。
   默认情况下，Python 不会``延迟求值''，表达式的值会立刻求出来。
 \end{itemize}
 
-\subsubsection{函数调用机制}\label{header-n229}
+\subsubsection{函数调用机制}\label{header-n234}
 
 \begin{itemize}
 \item
@@ -513,13 +525,13 @@ Python 的函数参数传递是通过\textbf{引用传递}。
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{def} \NormalTok{func1(ops }\OperatorTok{=} \NormalTok{[}\BuiltInTok{str}\NormalTok{.strip, user_define_func, ..], ..):}
-  \ControlFlowTok{for} \NormalTok{function }\OperatorTok{in} \NormalTok{ops:}
-    \NormalTok{value }\OperatorTok{=} \NormalTok{function(value)}
+\KeywordTok{def}\NormalTok{ func1(ops }\OperatorTok{=}\NormalTok{ [}\BuiltInTok{str}\NormalTok{.strip, user_define_func, ..], ..):}
+  \ControlFlowTok{for}\NormalTok{ function }\KeywordTok{in}\NormalTok{ ops:}
+\NormalTok{    value }\OperatorTok{=}\NormalTok{ function(value)}
 \end{Highlighting}
 \end{Shaded}
 
-\subsubsection{返回值}\label{header-n240}
+\subsubsection{返回值}\label{header-n245}
 
 \begin{itemize}
 \item
@@ -530,12 +542,12 @@ Python 的函数参数传递是通过\textbf{引用传递}。
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\ControlFlowTok{return} \NormalTok{(value1, value2)}
-\NormalTok{value1, value2 }\OperatorTok{=} \NormalTok{func1(..)}
+\ControlFlowTok{return}\NormalTok{ (value1, value2)}
+\NormalTok{value1, value2 }\OperatorTok{=}\NormalTok{ func1(..)}
 \end{Highlighting}
 \end{Shaded}
 
-\subsubsection{匿名函数（又称 LAMBDA 函数）}\label{header-n249}
+\subsubsection{匿名函数（又称 LAMBDA 函数）}\label{header-n254}
 
 \begin{itemize}
 \item
@@ -546,7 +558,7 @@ Python 的函数参数传递是通过\textbf{引用传递}。
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{lambda} \NormalTok{x : x }\OperatorTok{*} \DecValTok{2}
+\KeywordTok{lambda}\NormalTok{ x : x }\OperatorTok{*} \DecValTok{2}
 \CommentTok{#def func1(x) : return x * 2}
 \end{Highlighting}
 \end{Shaded}
@@ -558,11 +570,11 @@ Python 的函数参数传递是通过\textbf{引用传递}。
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{ma60 }\OperatorTok{=} \KeywordTok{lambda} \NormalTok{x : pd.rolling_mean(x, }\DecValTok{60}\NormalTok{)}
+\NormalTok{ma60 }\OperatorTok{=} \KeywordTok{lambda}\NormalTok{ x : pd.rolling_mean(x, }\DecValTok{60}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
-\subsubsection{一些有用的函数（针对数据结构）}\label{header-n262}
+\subsubsection{一些有用的函数（针对数据结构）}\label{header-n267}
 
 \begin{itemize}
 \item
@@ -572,7 +584,7 @@ Python 的函数参数传递是通过\textbf{引用传递}。
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\ControlFlowTok{for} \NormalTok{i, value }\OperatorTok{in} \BuiltInTok{enumerate}\NormalTok{(collection):}
+\ControlFlowTok{for}\NormalTok{ i, value }\KeywordTok{in} \BuiltInTok{enumerate}\NormalTok{(collection):}
 \end{Highlighting}
 \end{Shaded}
 
@@ -585,7 +597,7 @@ Python 的函数参数传递是通过\textbf{引用传递}。
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\BuiltInTok{sorted}\NormalTok{([}\DecValTok{2}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{3}\NormalTok{]) }\OperatorTok{=>} \NormalTok{[}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{]}
+\BuiltInTok{sorted}\NormalTok{([}\DecValTok{2}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{3}\NormalTok{]) }\OperatorTok{=>}\NormalTok{ [}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{]}
 \end{Highlighting}
 \end{Shaded}
 
@@ -593,8 +605,8 @@ Python 的函数参数传递是通过\textbf{引用传递}。
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\BuiltInTok{sorted}\NormalTok{(}\BuiltInTok{set}\NormalTok{(}\StringTok{'abc bcd'}\NormalTok{)) }\OperatorTok{=>} \NormalTok{[}\StringTok{' '}\NormalTok{,}
-\CommentTok{'a'}\NormalTok{, }\StringTok{'b'}\NormalTok{, }\StringTok{'c'}\NormalTok{, }\StringTok{'d'}\NormalTok{]}
+\BuiltInTok{sorted}\NormalTok{(}\BuiltInTok{set}\NormalTok{(}\StringTok{'abc bcd'}\NormalTok{)) }\OperatorTok{=>}\NormalTok{ [}\StringTok{' '}\NormalTok{,}
+\StringTok{'a'}\NormalTok{, }\StringTok{'b'}\NormalTok{, }\StringTok{'c'}\NormalTok{, }\StringTok{'d'}\NormalTok{]}
 \CommentTok{# 返回一个字符串排序后无重复的字母序列}
 \end{Highlighting}
 \end{Shaded}
@@ -606,7 +618,7 @@ Python 的函数参数传递是通过\textbf{引用传递}。
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\BuiltInTok{zip}\NormalTok{(seq1, seq2) }\OperatorTok{=>} \NormalTok{[(}\StringTok{'seq1_1'}\NormalTok{, }\StringTok{'seq2_1'}\NormalTok{), (..), ..]}
+\BuiltInTok{zip}\NormalTok{(seq1, seq2) }\OperatorTok{=>}\NormalTok{ [(}\StringTok{'seq1_1'}\NormalTok{, }\StringTok{'seq2_1'}\NormalTok{), (..), ..]}
 \end{Highlighting}
 \end{Shaded}
 
@@ -646,7 +658,7 @@ list(reversed(range(10)))
 \textbf{\texttt{reversed()} 会返回一个迭代器，\texttt{list()}
 使之成为一个列表。}
 
-\hypertarget{header-n302}{\subsection{控制流}\label{header-n302}}
+\hypertarget{header-n307}{\subsection{控制流}\label{header-n307}}
 
 \begin{itemize}
 \item
@@ -656,11 +668,11 @@ list(reversed(range(10)))
 \begin{Shaded}
 \begin{Highlighting}[]
 \CommentTok{#检查两个变量是否是相同的对象}
-\NormalTok{var1 }\OperatorTok{is} \NormalTok{var2}
+\NormalTok{var1 }\KeywordTok{is}\NormalTok{ var2}
 \CommentTok{#检查两个变量是否是不同的对象}
-\NormalTok{var1 }\OperatorTok{is} \OperatorTok{not} \NormalTok{var2}
+\NormalTok{var1 }\KeywordTok{is} \KeywordTok{not}\NormalTok{ var2}
 \CommentTok{#检查两个变量的值是否相等}
-\NormalTok{var1 }\OperatorTok{==} \NormalTok{var2}
+\NormalTok{var1 }\OperatorTok{==}\NormalTok{ var2}
 \end{Highlighting}
 \end{Shaded}
 
@@ -689,7 +701,7 @@ for a, b, c in iterator:
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{value }\OperatorTok{=} \NormalTok{true}\OperatorTok{-}\NormalTok{expr }\ControlFlowTok{if} \NormalTok{condition }\ControlFlowTok{else} \NormalTok{false}\OperatorTok{-}\NormalTok{expr}
+\NormalTok{value }\OperatorTok{=}\NormalTok{ true}\OperatorTok{-}\NormalTok{expr }\ControlFlowTok{if}\NormalTok{ condition }\ControlFlowTok{else}\NormalTok{ false}\OperatorTok{-}\NormalTok{expr}
 \end{Highlighting}
 \end{Shaded}
 
@@ -698,11 +710,11 @@ for a, b, c in iterator:
   Python 中没有 \texttt{switch/case} 语句，请使用 \texttt{if/elif}。
 \end{itemize}
 
-\hypertarget{header-n327}{\subsection{面向对象编程}\label{header-n327}}
+\hypertarget{header-n332}{\subsection{面向对象编程}\label{header-n332}}
 
 \begin{itemize}
 \item
-  \textbf{对象（object）}是 Python 中所有类型的根。
+  \textbf{对象}是 Python 中所有类型的根。
 \item
   万物（数字、字符串、函数、类、模块等）皆为对象，每个对象均有一个类型（type）。对象变量是一个指向变量在内存中位置的指针。
 \item
@@ -711,12 +723,12 @@ for a, b, c in iterator:
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{sys.getrefcount(}\DecValTok{5}\NormalTok{) }\OperatorTok{=>} \NormalTok{x}
-\NormalTok{a }\OperatorTok{=} \DecValTok{5}\NormalTok{, b }\OperatorTok{=} \NormalTok{a}
+\NormalTok{sys.getrefcount(}\DecValTok{5}\NormalTok{) }\OperatorTok{=>}\NormalTok{ x}
+\NormalTok{a }\OperatorTok{=} \DecValTok{5}\NormalTok{, b }\OperatorTok{=}\NormalTok{ a}
 \CommentTok{#上式会在等号的右边创建一个对象的引用，因此 a 和 b 均指向 5}
 \NormalTok{sys.getrefcount(}\DecValTok{5}\NormalTok{)}
-\OperatorTok{=>} \NormalTok{x }\OperatorTok{+} \DecValTok{2}
-\KeywordTok{del}\NormalTok{(a)}\OperatorTok{;} \NormalTok{sys.getrefcount(}\DecValTok{5}\NormalTok{) }\OperatorTok{=>} \NormalTok{x }\OperatorTok{+} \DecValTok{1}
+\OperatorTok{=>}\NormalTok{ x }\OperatorTok{+} \DecValTok{2}
+\KeywordTok{del}\NormalTok{(a)}\OperatorTok{;}\NormalTok{ sys.getrefcount(}\DecValTok{5}\NormalTok{) }\OperatorTok{=>}\NormalTok{ x }\OperatorTok{+} \DecValTok{1}
 \end{Highlighting}
 \end{Shaded}
 
@@ -751,7 +763,7 @@ MyObject.classFunc2('b')
 \end{Highlighting}
 \end{Shaded}
 
-\hypertarget{header-n349}{\subsection{常见字符串操作}\label{header-n349}}
+\hypertarget{header-n354}{\subsection{常见字符串操作}\label{header-n354}}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -760,11 +772,11 @@ MyObject.classFunc2('b')
 
 \CommentTok{#格式化字符串}
 \NormalTok{string1 }\OperatorTok{=} \StringTok{'My name is }\SpecialCharTok{\{0\}}\StringTok{　}\SpecialCharTok{\{name\}}\StringTok{'}
-\NormalTok{newString1 }\OperatorTok{=} \NormalTok{string1.}\BuiltInTok{format}\NormalTok{(}\StringTok{'Sean'}\NormalTok{, name }\OperatorTok{=}　\StringTok{'Chen'}\NormalTok{)}
+\NormalTok{newString1 }\OperatorTok{=}\NormalTok{ string1.}\BuiltInTok{format}\NormalTok{(}\StringTok{'Sean'}\NormalTok{, name }\OperatorTok{=}　\StringTok{'Chen'}\NormalTok{)}
 
 \CommentTok{#分裂字符串}
 \NormalTok{sep }\OperatorTok{=} \StringTok{'-'}\OperatorTok{;}
-\NormalTok{stringList1 }\OperatorTok{=}　\NormalTok{string1.split(sep)}
+\NormalTok{stringList1 }\OperatorTok{=}\NormalTok{　string1.split(sep)}
 
 \CommentTok{#获取子串}
 \NormalTok{start }\OperatorTok{=} \DecValTok{1}\OperatorTok{;}
@@ -779,7 +791,9 @@ MyObject.classFunc2('b')
 \end{Highlighting}
 \end{Shaded}
 
-\hypertarget{header-n351}{\subsection{异常处理}\label{header-n351}}
+对列表和字典以及元组的深入理解
+
+\hypertarget{header-n357}{\subsection{异常处理}\label{header-n357}}
 
 \begin{itemize}
 \item
@@ -789,15 +803,15 @@ MyObject.classFunc2('b')
 \begin{Shaded}
 \begin{Highlighting}[]
 \ControlFlowTok{try}\NormalTok{:}
-  \NormalTok{..}
-\ControlFlowTok{except} \PreprocessorTok{ValueError} \ImportTok{as} \NormalTok{e:}
-  \BuiltInTok{print} \NormalTok{e}
-\ControlFlowTok{except} \NormalTok{(}\PreprocessorTok{TypeError}\NormalTok{, AnotherError):}
-  \NormalTok{..}
+\NormalTok{  ..}
+\ControlFlowTok{except} \PreprocessorTok{ValueError} \ImportTok{as}\NormalTok{ e:}
+  \BuiltInTok{print}\NormalTok{ e}
+\ControlFlowTok{except}\NormalTok{ (}\PreprocessorTok{TypeError}\NormalTok{, AnotherError):}
+\NormalTok{  ..}
 \ControlFlowTok{except}\NormalTok{:}
-  \NormalTok{..}
+\NormalTok{  ..}
 \ControlFlowTok{finally}\NormalTok{:}
-  \NormalTok{.. }\CommentTok{# 清理，比如 close db;}
+\NormalTok{  .. }\CommentTok{# 清理，比如 close db;}
 \end{Highlighting}
 \end{Shaded}
 
@@ -815,49 +829,49 @@ MyObject.classFunc2('b')
 \end{Highlighting}
 \end{Shaded}
 
-\hypertarget{header-n362}{\subsection{对列表、字典和元组的深入理解}\label{header-n362}}
+\hypertarget{header-n369}{\subsection{对列表和字典以及元组的深入理解}\label{header-n369}}
 
 语法糖（syntactic sugar）会使代码变得更加易读易写。
 
-\subsubsection{对列表的理解}\label{header-n365}
+\subsubsection{对列表的理解}\label{header-n372}
 
 将一些元素通过一个简短的语句传入一个过滤器进行过滤和转化，然后可以组成一个新的列表。
 
 \begin{Shaded}
 \begin{Highlighting}[]
 \CommentTok{#基本形式}
-\NormalTok{[expr }\ControlFlowTok{for} \NormalTok{val }\OperatorTok{in} \NormalTok{collection }\ControlFlowTok{if} \NormalTok{condition]}
+\NormalTok{[expr }\ControlFlowTok{for}\NormalTok{ val }\KeywordTok{in}\NormalTok{ collection }\ControlFlowTok{if}\NormalTok{ condition]}
 \CommentTok{#ShortCut}
-\NormalTok{result }\OperatorTok{=} \NormalTok{[]}
-\ControlFlowTok{for} \NormalTok{val }\OperatorTok{in} \NormalTok{collection:}
-  \ControlFlowTok{if} \NormalTok{condition:}
-    \NormalTok{result.append(expr)}
+\NormalTok{result }\OperatorTok{=}\NormalTok{ []}
+\ControlFlowTok{for}\NormalTok{ val }\KeywordTok{in}\NormalTok{ collection:}
+  \ControlFlowTok{if}\NormalTok{ condition:}
+\NormalTok{    result.append(expr)}
 \end{Highlighting}
 \end{Shaded}
 
 可以省略过滤条件，只留下表达式。
 
-\subsubsection{对字典的理解}\label{header-n371}
+\subsubsection{对字典的理解}\label{header-n378}
 
 基本形式：
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{\{key}\OperatorTok{-}\NormalTok{expr : value}\OperatorTok{-}\NormalTok{expr }\ControlFlowTok{for} \NormalTok{value }\OperatorTok{in} \NormalTok{collection }\ControlFlowTok{if} \NormalTok{condition\}}
+\NormalTok{\{key}\OperatorTok{-}\NormalTok{expr : value}\OperatorTok{-}\NormalTok{expr }\ControlFlowTok{for}\NormalTok{ value }\KeywordTok{in}\NormalTok{ collection }\ControlFlowTok{if}\NormalTok{ condition\}}
 \end{Highlighting}
 \end{Shaded}
 
-\subsubsection{对集合的理解}\label{header-n375}
+\subsubsection{对集合的理解}\label{header-n382}
 
 基本形式：和列表一样，只是应该使用 \texttt{()} 而不是 \texttt{{[}{]}} 。
 
-\subsubsection{嵌套列表}\label{header-n378}
+\subsubsection{嵌套列表}\label{header-n385}
 
 基本形式：
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{[expr }\ControlFlowTok{for} \NormalTok{val }\OperatorTok{in} \NormalTok{collection }\ControlFlowTok{for} \NormalTok{innerVal }\OperatorTok{in} \NormalTok{val }\ControlFlowTok{if} \NormalTok{condition]}
+\NormalTok{[expr }\ControlFlowTok{for}\NormalTok{ val }\KeywordTok{in}\NormalTok{ collection }\ControlFlowTok{for}\NormalTok{ innerVal }\KeywordTok{in}\NormalTok{ val }\ControlFlowTok{if}\NormalTok{ condition]}
 \end{Highlighting}
 \end{Shaded}
 

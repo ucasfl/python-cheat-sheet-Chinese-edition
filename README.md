@@ -1,7 +1,8 @@
 Python 速查表中文版
 ===
 
-本手册是 [Python cheat sheet](http://datasciencefree.com/python.pdf) 的中文翻译版。原作者：Arianne Colton and Sean Chen(data.scientist.info@gmail.com)
+- 本手册是 [Python cheat sheet](http://datasciencefree.com/python.pdf) 的中文翻译版。原作者：Arianne Colton and Sean Chen(data.scientist.info@gmail.com)
+- 编译：[ucasFL](https://github.com/ucasFL)
 
 [惯例](#惯例)
 
@@ -28,7 +29,7 @@ Python 速查表中文版
 ## 惯例
 
 - Python 对大小写敏感；
-- Python 的索引从 0 开始（所有编程语言均如此）；
+- Python 的索引从 0 开始（几乎所有编程语言均如此）；
 - Python 使用空白符（制表符或空格）来缩进代码，而不是使用花括号。
 
 ## 获取帮助
